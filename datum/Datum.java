@@ -22,6 +22,6 @@ public class Datum {
     }
     
     public String vratAkoText() {
-        return "aaa";
+        return this.den + ". " + this.mesiac + ". " + this.rok;
     }
 }
