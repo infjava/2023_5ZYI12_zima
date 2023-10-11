@@ -34,14 +34,13 @@ public class Kalkulacka {
     }
     
     public void mocnina(int n) {
-        double medzivysledok = this.vysledok;
+        double medzivysledok = 1;
         
-        // n - 1 pouzivam pre to, lebo algoritmus robi x nasobeni
-        // a kedze potrebujem n - 1 nasobeni vysledku, tak musim mat
-        // x = n - 1
-        for (int i = 0; i < n - 1; i++) {
-            this.vysledok = this.vysledok * medzivysledok;
+        for (int i = 0; i < n; i++) {
+            medzivysledok = this.vysledok * medzivysledok;
         }
+        
+        this.vysledok = medzivysledok;
     }
     
     public double getVysledok() {
