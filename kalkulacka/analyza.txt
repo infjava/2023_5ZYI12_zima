@@ -1,0 +1,15 @@
+kalkulacka = new Kalkulacka()
+kalkulacka.zadajCislo(1);
+kalkulacka.pripocitaj(2);
+kalkulacka.vynasob(3);
+
+kalkulacka = new Kalkulacka()
+kalkulacka.zadajCislo(5);
+kalkulacka.vynasob(17);
+
+1
++ 2
+* 3
+
+5
+* 17
