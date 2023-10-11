@@ -59,10 +59,12 @@ public class Kalkulacka {
     
     public void druhaOdmocnina() {
         double medzivysledok = this.vysledok / 2;
+        double staryMedzivysledok;
         
-        for (int i = 0; i < 10; i++) {
+        do {
+            staryMedzivysledok = medzivysledok;
             medzivysledok = (medzivysledok + this.vysledok / medzivysledok) / 2;
-        };
+        } while (Math.abs(staryMedzivysledok - medzivysledok) > 0.00000000000001);
         
         this.vysledok = medzivysledok;
     }
