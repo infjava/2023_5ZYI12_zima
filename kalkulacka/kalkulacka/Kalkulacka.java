@@ -22,7 +22,11 @@ public class Kalkulacka {
     }
     
     public void vydel(double hodnota) {
-        this.vysledok = this.vysledok / hodnota;
+        if (hodnota != 0) {
+            this.vysledok = this.vysledok / hodnota;
+        } else {
+            System.out.println("ERROR: delenie nulou");
+        }
     }
     
     public double getVysledok() {
