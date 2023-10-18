@@ -111,6 +111,15 @@ public class Cislica {
                 this.segmentF.rozsvietSa();
                 this.segmentG.rozsvietSa();
                 break;
+            default:
+                this.segmentA.zhasni();
+                this.segmentB.zhasni();
+                this.segmentC.zhasni();
+                this.segmentD.zhasni();
+                this.segmentE.zhasni();
+                this.segmentF.zhasni();
+                this.segmentG.zhasni();
+                break;
         }
     }
 }
