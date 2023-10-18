@@ -15,6 +15,8 @@ public class Cislica {
         this.segmentE = new Segment(0, 60, true);
         this.segmentF = new Segment(0, 10, true);
         this.segmentG = new Segment(10, 50, false);
+        
+        this.zmenHodnotu(cislica);
     }
     
     public void zmenHodnotu(int cislica) {
