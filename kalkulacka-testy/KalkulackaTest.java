@@ -29,5 +29,15 @@ public class KalkulackaTest {
         kalkulac1.pripocitaj(9);
         assertEquals(14, kalkulac1.getVysledok(), 0.1);
     }
+
+    @Test
+    public void vynasob8A3()
+    {
+        Kalkulacka kalkulac1 = new Kalkulacka();
+        kalkulac1.zadajCislo(8);
+        kalkulac1.vynasob(3);
+        assertEquals(24, kalkulac1.getVysledok(), 0.1);
+    }
 }
+
 
