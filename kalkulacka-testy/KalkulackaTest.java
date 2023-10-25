@@ -38,6 +38,15 @@ public class KalkulackaTest {
         kalkulac1.vynasob(3);
         assertEquals(24, kalkulac1.getVysledok(), 0.1);
     }
+
+    @Test
+    public void vypocitaj5Plus9()
+    {
+        kalkulac1.zadajCislo(5);
+        assertEquals(true, kalkulac1.vypocitaj("+", 9));
+        assertEquals(14, kalkulac1.getVysledok(), 0.1);
+    }
 }
+
 
 
