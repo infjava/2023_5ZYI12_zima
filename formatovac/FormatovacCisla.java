@@ -35,7 +35,7 @@ public class FormatovacCisla {
      */
     public String getCislo(int pocetDesatinnychMiest) {
         // TODO Doprogramujte:
-        return "";       
+        return String.format("%." + pocetDesatinnychMiest + "f", this.cislo);
     }
     
     /**
@@ -54,7 +54,7 @@ public class FormatovacCisla {
      */
     public String getCisloZarovnajVpravo(int pocetDesatinnychMiest, int pocetZnakov) {
         // TODO Doprogramujte:
-        return "";
+        return String.format("%" + pocetZnakov + "." + pocetDesatinnychMiest + "f", this.cislo);
     }
 
     /**
@@ -65,6 +65,6 @@ public class FormatovacCisla {
      */
     public String getCisloZarovnajVlavo(int pocetDesatinnychMiest, int pocetZnakov) {
         // TODO Doprogramujte:
-        return "";
+        return String.format("%-" + pocetZnakov + "." + pocetDesatinnychMiest + "f", this.cislo);
     }
 }
