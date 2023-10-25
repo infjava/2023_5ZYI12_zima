@@ -13,23 +13,39 @@ public class CirkusStringerto {
     }
     
     public String getRetazec() {
-        return "";
+        return this.retazec;
     }   
 
     public void setRetazec(String novyRetazec) {
-        
+        this.retazec = novyRetazec;
     }
     
     public String opakujRetazec(int pocet) {
-        return this.retazec;
+        StringBuilder vysledok = new StringBuilder();
+        for (int i = 0; i < pocet; i++) {
+            vysledok.append(this.retazec);
+        }
+        return vysledok.toString();
     }
     
     public boolean jePalindrom() {
+        int dlzka = this.retazec.length();
+        for (int i = 0; i < dlzka; i++) {
+            int koniecI = dlzka - 1 - i;
+            char prvyZnak = Character.toLowerCase(this.retazec.charAt(i));
+            char druhyZnak = Character.toLowerCase(this.retazec.charAt(koniecI));
+            if (prvyZnak != druhyZnak) {
+                return false;
+            }
+        }
+        
         return true;
     }
     
     public void posuvaj(int pocetKrokov) {
-        
+        int dlzka = this.retazec.length();
+        for (int i = 0; i < pocetKrokov; i++) {
+            System.out.format("|%" + (i + dlzka) + "s|%n", this.retazec);
+        }
     }       
-       
 }
