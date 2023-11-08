@@ -4,7 +4,7 @@ public class Ruka {
     
     public Ruka(int suradnicaX, int suradnicaY, int cisloGesta) {
         this.aktGesto = cisloGesta;
-        this.obrGesto = new Obrazok("pics/" + this.getNazovGesta() +".png");
+        this.obrGesto = new Obrazok(this.getNazovSuboruSGestom());
         this.obrGesto.zmenPolohu(suradnicaX, suradnicaY);
         this.obrGesto.zobraz();
     }
@@ -50,6 +50,10 @@ public class Ruka {
     }
     
     private void ukazGesto() {
-        this.obrGesto.zmenObrazok("pics/" + this.getNazovGesta() + ".png");
+        this.obrGesto.zmenObrazok(this.getNazovSuboruSGestom());
+    }
+    
+    private String getNazovSuboruSGestom() {
+        return String.format("pics/%s.png", this.getNazovGesta());
     }
 }
