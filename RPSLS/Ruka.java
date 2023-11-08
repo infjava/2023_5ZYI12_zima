@@ -3,7 +3,11 @@ public class Ruka {
     private Obrazok obrGesto;
     
     public Ruka(int suradnicaX, int suradnicaY, int cisloGesta) {
-        this.aktGesto = cisloGesta;
+        if (cisloGesta >= 0 && cisloGesta <= 4) {
+            this.aktGesto = cisloGesta;
+        } else {
+            this.aktGesto = 0;
+        }
         this.obrGesto = new Obrazok(this.getNazovSuboruSGestom());
         this.obrGesto.zmenPolohu(suradnicaX, suradnicaY);
         this.obrGesto.zobraz();
@@ -27,7 +31,9 @@ public class Ruka {
     }
     
     public void setGesto(int cislo) {
-        this.aktGesto = cislo;
+        if (cislo >= 0 && cislo <= 4) {
+            this.aktGesto = cislo;
+        }
         this.ukazGesto();
     }
     
