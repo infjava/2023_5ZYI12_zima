@@ -44,23 +44,7 @@ public class Ruka {
     
     public void setGesto(int cislo) {
         this.aktGesto = cislo;
-        switch (cislo) {
-            case 0:
-                this.obrGesto.zmenObrazok("pics/rock.png");
-                break;
-            case 1:
-                this.obrGesto.zmenObrazok("pics/paper.png");
-                break;
-            case 2:
-                this.obrGesto.zmenObrazok("pics/scissors.png");
-                break;
-            case 3:
-                this.obrGesto.zmenObrazok("pics/lizard.png");
-                break;
-            case 4:
-                this.obrGesto.zmenObrazok("pics/spock.png");
-                break;
-        }
+        this.ukazGesto();
     }
     
     public void setNasledujuceGesto() {
@@ -69,23 +53,7 @@ public class Ruka {
         if (this.aktGesto > 4) {
             this.aktGesto = 0;
         }
-        switch (this.aktGesto) {
-            case 0:
-                this.obrGesto.zmenObrazok("pics/rock.png");
-                break;
-            case 1:
-                this.obrGesto.zmenObrazok("pics/paper.png");
-                break;
-            case 2:
-                this.obrGesto.zmenObrazok("pics/scissors.png");
-                break;
-            case 3:
-                this.obrGesto.zmenObrazok("pics/lizard.png");
-                break;
-            case 4:
-                this.obrGesto.zmenObrazok("pics/spock.png");
-                break;
-        }
+        this.ukazGesto();
     }
     
     public void setPredchadzajuceGesto() {
@@ -94,6 +62,10 @@ public class Ruka {
         if (this.aktGesto < 0) {
             this.aktGesto = 4;
         }
+        this.ukazGesto();
+    }
+    
+    private void ukazGesto() {
         switch (this.aktGesto) {
             case 0:
                 this.obrGesto.zmenObrazok("pics/rock.png");
