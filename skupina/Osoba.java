@@ -1,10 +1,14 @@
+import java.util.ArrayList;
+
 public class Osoba {
     private String meno;
     private String priezvisko;
+    private ArrayList<Double> body;
 
     public Osoba(String meno, String priezvisko) {
         this.meno = meno;
         this.priezvisko = priezvisko;
+        this.body = new ArrayList<Double>();
     }
 
     public String getMeno() {
@@ -17,5 +21,13 @@ public class Osoba {
 
     public void vypis() {
         System.out.println(this.meno + " " + this.priezvisko);
+    }
+    
+    public void pridajVysledok(double body) {
+        this.body.add(body);
+    }
+    
+    public double vypocitajPriemerBodov() {
+        return 0;
     }
 }
