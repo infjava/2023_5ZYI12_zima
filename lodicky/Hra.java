@@ -36,4 +36,8 @@ public class Hra {
         
         citac.close();
     }
+    
+    public void zasiahni(int x, int y) {
+        this.hraciaPlocha[y][x].zasiahni();
+    }
 }
