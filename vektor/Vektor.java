@@ -21,8 +21,11 @@ public class Vektor {
     public void vypisVektor() {
         // osetrit ciarku na konci
         System.out.print("(");
-        for (double zlozka : this.vektor) {
-            System.out.format("%.2f,", zlozka);
+        for (int i = 0; i < this.getDlzka(); i++) {
+            System.out.format("%.2f", this.getPrvok(i));
+            if (i < this.getDlzka() - 1) {
+                System.out.format("; ");
+            }
         }
         System.out.println(")");
     }
