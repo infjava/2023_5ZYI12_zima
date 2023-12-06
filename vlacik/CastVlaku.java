@@ -17,14 +17,19 @@ public class CastVlaku {
         this.dalsiaCast = null;
     }
     
-    public void setPoloha(Poloha poloha) {
-        this.poloha = poloha;
-        this.obrazok.zmenPolohu(poloha.getX() * VELKOST_POLICKA, poloha.getY() * VELKOST_POLICKA);
-        this.obrazok.zmenUhol(poloha.getSmer().getUhol());
-    }
-    
     public Poloha getPoloha() {
         return this.poloha;
+    }
+    
+    public void posun(Smer smer) {
+        Smer otocenie = this.poloha.getSmer();
+        this.poloha = this.poloha.getPosunutuPolohu(1, smer);
+        this.obrazok.zmenPolohu(this.poloha.getX() * VELKOST_POLICKA, this.poloha.getY() * VELKOST_POLICKA);
+        this.obrazok.zmenUhol(this.poloha.getSmer().getUhol());
+        
+        if (this.dalsiaCast != null) {
+            this.dalsiaCast.posun(otocenie);
+        }
     }
     
     public void pripojCast(TypCastiVlaku typ) {
