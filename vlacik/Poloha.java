@@ -1,7 +1,7 @@
 public class Poloha {
-    private int x;
-    private int y;
-    private Smer smer;
+    private final int x;
+    private final int y;
+    private final Smer smer;
     
     public Poloha(int x, int y, Smer smer) {
         this.x = x;

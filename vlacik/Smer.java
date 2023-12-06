@@ -4,9 +4,9 @@ public enum Smer {
     VLAVO(0, -1, 0),
     VPRAVO(180, 1, 0);
     
-    private int uhol;
-    private int vektorX;
-    private int vektorY;
+    private final int uhol;
+    private final int vektorX;
+    private final int vektorY;
     
     Smer(int uhol, int vektorX, int vektorY) {
         this.uhol = uhol;

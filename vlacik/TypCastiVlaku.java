@@ -4,7 +4,7 @@ public enum TypCastiVlaku {
     VAGON2("vagon02"),
     VAGON3("vagon03");
     
-    private String suborObrazka;
+    private final String suborObrazka;
     
     TypCastiVlaku(String subor) {
         this.suborObrazka = String.format("pics/%s.png", subor);

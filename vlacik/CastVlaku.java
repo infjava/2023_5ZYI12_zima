@@ -4,7 +4,7 @@ public class CastVlaku {
     private static final int VELKOST_POLICKA = 35;
     
     private Poloha poloha;
-    private Obrazok obrazok;
+    private final Obrazok obrazok;
     
     private CastVlaku dalsiaCast;
     
